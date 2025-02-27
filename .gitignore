@@ -26,3 +26,8 @@ target/
 /guix-build-*
 
 /ci/scratch/
+
+# clangd cache
+.cache/
+.direnv/
+.ccls-cache/
