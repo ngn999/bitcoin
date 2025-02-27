@@ -21,3 +21,8 @@ test/lint/test_runner/target/
 /guix-build-*
 
 /ci/scratch/
+
+# clangd cache
+.cache/
+.direnv/
+.ccls-cache/
