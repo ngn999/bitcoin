@@ -1,0 +1,64 @@
+Diagnostics:
+  UnusedIncludes: None
+  ClangTidy:
+    Remove:
+      - clang-analyzer-alpha.core.CastSize
+      - clang-analyzer-alpha.core.CastToStruct
+      - clang-analyzer-alpha.core.IdenticalExpr
+      - clang-analyzer-alpha.core.SizeofPtr
+      - clang-analyzer-alpha.security.ArrayBoundV2
+      - clang-analyzer-alpha.security.MallocOverflow
+      - clang-analyzer-alpha.security.ReturnPtrRange
+      - clang-analyzer-alpha.unix.SimpleStream
+      - clang-analyzer-alpha.unix.cstring.BufferOverlap
+      - clang-analyzer-alpha.unix.cstring.NotNullTerminated
+      - clang-analyzer-alpha.unix.cstring.OutOfBounds
+      - clang-analyzer-core.CallAndMessage
+      - clang-analyzer-core.DivideZero
+      - clang-analyzer-core.NonNullParamChecker
+      - clang-analyzer-core.NullDereference
+      - clang-analyzer-core.StackAddressEscape
+      - clang-analyzer-core.UndefinedBinaryOperatorResult
+      - clang-analyzer-core.VLASize
+      - clang-analyzer-core.uninitialized.ArraySubscript
+      - clang-analyzer-core.uninitialized.Assign
+      - clang-analyzer-core.uninitialized.Branch
+      - clang-analyzer-core.uninitialized.CapturedBlockVariable
+      - clang-analyzer-core.uninitialized.UndefReturn
+      - clang-analyzer-deadcode.DeadStores
+      - clang-analyzer-nullability.NullPassedToNonnull
+      - clang-analyzer-nullability.NullReturnedFromNonnull
+      - clang-analyzer-nullability.NullableDereferenced
+      - clang-analyzer-nullability.NullablePassedToNonnull
+      - clang-analyzer-nullability.NullableReturnedFromNonnull
+      - clang-analyzer-optin.cplusplus.VirtualCall
+      - clang-analyzer-optin.mpi.MPI-Checker
+      - clang-analyzer-optin.osx.cocoa.localizability.EmptyLocalizationContextChecker
+      - clang-analyzer-optin.osx.cocoa.localizability.NonLocalizedStringChecker
+      - clang-analyzer-optin.performance.Padding
+      - clang-analyzer-security.insecureAPI.DeprecatedOrUnsafeBufferHandling
+      - clang-analyzer-security.insecureAPI.bcmp
+      - clang-analyzer-security.insecureAPI.bcopy
+      - clang-analyzer-security.insecureAPI.bzero
+      - clang-analyzer-security.insecureAPI.rand
+      - clang-analyzer-security.insecureAPI.strcpy
+      - clang-analyzer-unix.API
+      - clang-analyzer-unix.Malloc
+      - clang-analyzer-unix.MallocSizeof
+      - clang-analyzer-unix.MismatchedDeallocator
+      - clang-analyzer-unix.Vfork
+      - clang-analyzer-unix.cstring.BadSizeArg
+      - clang-analyzer-unix.cstring.NullArg
+      - clang-analyzer-valist.Uninitialized
+      - clang-analyzer-valist.Unterminated
+  Suppress:
+    # Suppress thread safety analysis warnings
+    - -Wthread-safety*
+    - -Wthread-safety-analysis
+    - -Wthread-safety-attributes
+    - -Wthread-safety-beta
+    - -Wthread-safety-precise
+    - -Wthread-safety-reference
+    - -Wthread-safety-negative
+    # Suppress unused member function warnings
+    - -Wunused-member-function
